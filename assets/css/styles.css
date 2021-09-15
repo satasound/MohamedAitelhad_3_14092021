@@ -1,0 +1,197 @@
+/*Mobile First */
+
+/* General */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto";
+}
+.shrinkhand {
+  font-family: "Shrikhand", cursive;
+}
+h3 {
+  font-size: 1.1rem;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.crop {
+  object-fit: cover;
+}
+
+/***** Couleurs*****/
+
+.primaire {
+  background-color: #9356dc;
+}
+.secondaire {
+  background-color: #ff79da;
+}
+.tertiaire {
+  background-color: #99e2d0;
+}
+.grey {
+  background-color: #f6f6f6;
+}
+.grey-location {
+  background-color: #eaeaea;
+}
+.ohmyfood-black {
+  background-color: #353535;
+}
+.hover-fonctionnement {
+  background-color: #f5edff;
+}
+/******** HEADER ********/
+
+header h1 {
+  text-align: center;
+  padding: 10px 0 0;
+}
+/******** MAIN ********/
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+}
+.location {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  box-shadow: 0px 3px 3px inset #cecece;
+  padding: 16px 0;
+}
+.reservation {
+  text-align: center;
+  padding: 42px 50px 57px;
+}
+.reservation h2 {
+  margin-bottom: 25px;
+}
+.reservation p {
+  margin-bottom: 35px;
+}
+.reservation button {
+  padding: 18px;
+  background: linear-gradient(#cb56dc, #9356dc);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.entree h2,
+.main-course h2,
+.dessert h2 {
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-weight: normal;
+}
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 52px 20px;
+}
+.choices-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+.choice {
+  height: 75px;
+  width: auto;
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px #c1c1c19c;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 0 24px 12px;
+}
+.choice:hover {
+  background-color: #f5edff;
+}
+.choice-icon {
+  color: #7e7e7e;
+}
+.choice-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -12px;
+}
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 58px 20px 64px;
+}
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px #c1c1c19c;
+}
+.restaurant-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 25px 20px 14px;
+}
+.heart {
+  font-size: 2rem;
+  line-height: 50px;
+}
+.restaurant-card img {
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants h2 {
+  margin-bottom: 30px;
+}
+.restaurant-name h3 {
+  margin-bottom: 12px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/******** FOOTER  ********/
+
+footer {
+  width: 100%;
+  padding: 26px 20px 38px;
+  color: #fff;
+}
+footer ul li {
+  margin-bottom: 12px;
+}
+footer ul li i {
+  margin-right: 12px;
+}
+footer h2 {
+  margin-bottom: 27px;
+  font-weight: 100;
+}
