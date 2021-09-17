@@ -30,32 +30,41 @@ a {
 
 /***** Couleurs*****/
 
-.primaire {
+.primary {
   background-color: #9356dc;
 }
-.secondaire {
+.secondary {
   background-color: #ff79da;
 }
-.tertiaire {
+.tertiary {
   background-color: #99e2d0;
 }
 .grey {
   background-color: #f6f6f6;
 }
-.grey-location {
+.lite-grey {
   background-color: #eaeaea;
 }
-.ohmyfood-black {
+.custom-black {
   background-color: #353535;
 }
-.hover-fonctionnement {
+.choice-hover {
   background-color: #f5edff;
 }
+
 /******** HEADER ********/
 
 header h1 {
   text-align: center;
-  padding: 10px 0 0;
+}
+.back-arrow {
+  border: none;
+  background-color: white;
+  font-size: x-large;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 24px;
 }
 /******** MAIN ********/
 
@@ -69,11 +78,13 @@ main {
   gap: 18px;
   text-align: center;
   box-shadow: 0px 3px 3px inset #cecece;
+  background-color: #eaeaea;
   padding: 16px 0;
 }
 .reservation {
   text-align: center;
   padding: 42px 50px 57px;
+  background-color: #f6f6f6;
 }
 .reservation h2 {
   margin-bottom: 25px;
@@ -81,19 +92,19 @@ main {
 .reservation p {
   margin-bottom: 35px;
 }
-.reservation button {
-  padding: 18px;
-  background: linear-gradient(#cb56dc, #9356dc);
+.btn {
+  padding: 1rem;
+  box-shadow: 0rem 0.2rem 0.5rem lightgrey;
+  background: linear-gradient(355deg, #9356dc, #ff79da);
   border: none;
-  border-radius: 30px;
+  border-radius: 2rem;
   color: #fff;
   font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
 }
-.entree h2,
-.main-course h2,
-.dessert h2 {
+.course h3 {
   text-transform: uppercase;
   font-size: 12pt;
   font-weight: normal;
@@ -104,7 +115,7 @@ main {
   gap: 20px;
   padding: 52px 20px;
 }
-.choices-list {
+.fonctionnement ul {
   display: flex;
   flex-direction: column;
   /* gap: 20px; */
@@ -114,6 +125,7 @@ main {
   width: auto;
   border-radius: 15px;
   box-shadow: 0px 3px 15px #c1c1c19c;
+  background-color: #f6f6f6;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -122,10 +134,10 @@ main {
 .choice:hover {
   background-color: #f5edff;
 }
-.choice-icon {
+.choice__icon {
   color: #7e7e7e;
 }
-.choice-number {
+.choice__chip {
   width: 24px;
   height: 24px;
   border-radius: 25px;
@@ -134,14 +146,18 @@ main {
   justify-content: center;
   align-items: center;
   margin-left: -12px;
+  background-color: #9356dc;
 }
-.restaurants {
+.restaurants-list {
   display: flex;
   flex-direction: column;
   padding: 58px 20px 64px;
+  background-color: #f6f6f6;
 }
-
-.restaurant-card {
+.restaurants-list h2 {
+  margin-bottom: 28px;
+}
+.restaurant {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -150,40 +166,48 @@ main {
   border-radius: 15px;
   box-shadow: 0px 3px 15px #c1c1c19c;
 }
-.restaurant-description {
+.restaurant__description {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 25px 20px 14px;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  padding: 14px 25px 20px 14px;
+}
+.restaurant__description > * {
+  flex: 100%;
+}
+.restaurant__description h3,
+.heart {
+  flex: auto;
+}
+.restaurant__description h3 {
+  flex: auto;
+  font-size: 1.2rem;
+}
+.restaurant__description p {
+  order: 1;
+  margin-top: 2px;
+  font-size: 1.2rem;
 }
 .heart {
-  font-size: 2rem;
-  line-height: 50px;
+  font-size: 1.5rem;
+  color: #353535;
+  text-align: right;
 }
-.restaurant-card img {
+.restaurant__img {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0 0;
 }
-.restaurants h2 {
-  margin-bottom: 30px;
+.restaurant-banner h3 {
+  text-align: right;
 }
-.restaurant-name h3 {
-  margin-bottom: 12px;
-}
-
-.thumbnails {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 /******** FOOTER  ********/
 
 footer {
   width: 100%;
   padding: 26px 20px 38px;
   color: #fff;
+  background-color: #353535;
 }
 footer ul li {
   margin-bottom: 12px;
