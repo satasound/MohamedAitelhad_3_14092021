@@ -48,7 +48,7 @@ a {
 .custom-black {
   background-color: #353535;
 }
-.choice-hover {
+.menu-hover {
   background-color: #f5edff;
 }
 
@@ -68,10 +68,10 @@ header h1 {
 }
 /******** MAIN ********/
 
-main {
+/* main {
   display: flex;
   flex-flow: column wrap;
-}
+} */
 .location {
   display: flex;
   justify-content: center;
@@ -94,6 +94,7 @@ main {
 }
 .btn {
   padding: 1rem;
+  margin: 0 auto;
   box-shadow: 0rem 0.2rem 0.5rem lightgrey;
   background: linear-gradient(355deg, #9356dc, #ff79da);
   border: none;
@@ -104,23 +105,17 @@ main {
   cursor: pointer;
   position: relative;
 }
-.course h3 {
-  text-transform: uppercase;
-  font-size: 12pt;
-  font-weight: normal;
-}
-.fonctionnement {
+.list-wraper {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 52px 20px;
 }
-.fonctionnement ul {
+.list-wraper ul {
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
 }
-.choice {
+.list-wraper__item {
   height: 75px;
   width: auto;
   border-radius: 15px;
@@ -131,13 +126,13 @@ main {
   gap: 30px;
   margin: 0 0 24px 12px;
 }
-.choice:hover {
+.list-wraper__item:hover {
   background-color: #f5edff;
 }
-.choice__icon {
+.list-wraper__item__icon {
   color: #7e7e7e;
 }
-.choice__chip {
+.list-wraper__item__chip {
   width: 24px;
   height: 24px;
   border-radius: 25px;
@@ -198,8 +193,61 @@ main {
   height: 174px;
   border-radius: 15px 15px 0 0;
 }
-.restaurant-banner h3 {
-  text-align: right;
+.menu-banner img {
+  width: 100%;
+  height: 254px;
+}
+.menu-banner {
+  background-color: #f6f6f6;
+}
+.dishes-list {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 12px 0;
+  background-color: #f6f6f6;
+}
+.dishes-list h3 {
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.dish {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  height: auto;
+  width: auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px #c1c1c19c;
+  background-color: #fff;
+  overflow: hidden;
+
+  margin: 0 0 24px 0;
+}
+.dish__description {
+  display: flex;
+  justify-content: space-between;
+}
+.dish__price {
+  font-weight: bold;
+}
+.dish__check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #99e2d0;
+  border-radius: 0 15px 15px 0;
+  width: 60px;
+  height: 100%;
+  background-color: #99e2d0;
+  margin-right: -62px;
+}
+.dish__check-box .fas {
+  color: #fff;
+  font-size: 1.5rem;
 }
 /******** FOOTER  ********/
 
