@@ -8,11 +8,13 @@
   box-sizing: border-box;
 }
 body {
+  counter-reset: compteur;
   font-family: "Roboto";
 }
 .shrinkhand {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
+  text-align: center;
 }
 h3 {
   font-size: 1.1rem;
@@ -26,7 +28,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.restaurant__image--crop {
+img {
   object-fit: cover;
 }
 
@@ -41,26 +43,28 @@ $custom-black: #353535;
 $menu-hover: #f5edff;
 $shadow: #c1c1c19c;
 
-/******** HEADER ********/
+/********************** HEADER **********
+*****************************************/
 
-header h1 {
-  text-align: center;
-}
 .back-arrow {
   border: none;
   background-color: white;
   font-size: x-large;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  left: 24px;
+  top: 12px;
+  left: 12px;
 }
-/******** MAIN ********/
+/********************** MAIN ***********
+****************************************/
 
 main {
   background-color: $grey;
   padding-bottom: 60px;
 }
+
+/******* Section Location ********/
+
 .location {
   display: flex;
   justify-content: center;
@@ -78,6 +82,9 @@ main {
     font-size: 1.1rem;
   }
 }
+
+/***** Section Reservation ******/
+
 .reservation {
   text-align: center;
   padding: 42px 50px 57px;
@@ -102,6 +109,8 @@ main {
   }
 }
 
+/********* Section List **********/
+
 .list {
   display: flex;
   flex-direction: column;
@@ -122,6 +131,19 @@ main {
     align-items: center;
     gap: 30px;
     margin: 0 0 24px 12px;
+    &::before {
+      counter-increment: compteur;
+      content: counter(compteur) " ";
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      margin-left: -1rem;
+      background: #9356dc;
+      border-radius: 1rem;
+    }
     &:hover {
       background-color: $menu-hover;
     }
@@ -132,18 +154,10 @@ main {
       background-color: $primary;
     }
   }
-  &__chip {
-    width: 24px;
-    height: 24px;
-    border-radius: 25px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -12px;
-    background-color: $primary;
-  }
 }
+
+/******* Section Restaurant ********/
+
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -180,9 +194,6 @@ main {
     width: 100%;
     height: 174px;
     border-radius: 15px 15px 0 0;
-    &--crop {
-      object-fit: cover;
-    }
   }
   * {
     flex: 100%;
@@ -209,7 +220,10 @@ main {
   text-align: right;
   flex: auto;
 }
-.menu-banner {
+
+/******* Section Banner ********/
+
+.banner {
   img {
     width: 100%;
     height: 254px;
@@ -219,19 +233,32 @@ main {
     position: relative;
     background-color: $grey;
     margin-top: -38px;
-    padding: 34px 30px 0 20px;
+    padding: 34px 12px 0;
     border-radius: 2.5rem 2.5rem 0 0;
   }
 }
+
+/******* Section Dish ********/
+
 .dish {
-  display: flex;
-  flex-direction: column;
-  padding: 18px 12px 0;
+  &__course {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 12px 0;
+  }
+
   &__heading {
     text-transform: uppercase;
     font-size: 12pt;
     font-weight: normal;
     margin-bottom: 15px;
+    &::after {
+      content: "";
+      display: flex;
+      width: 2.8rem;
+      height: 3px;
+      background: $tertiary;
+    }
   }
   &__item {
     display: flex;
@@ -257,28 +284,15 @@ main {
   &__price {
     font-weight: bold;
   }
-  //   &__check {
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     border: solid 1px $tertiary;
-  //     border-radius: 0 15px 15px 0;
-  //     width: 60px;
-  //     height: 100%;
-  //     background-color: $tertiary;
-  //     margin-right: -62px;
-  //     .fas {
-  //       color: white;
-  //       font-size: 1.5rem;
-  //     }
-  //   }
   &__button {
     @extend .reservation__button;
+    display: block;
     padding: 1rem 3rem;
   }
 }
 
-/******** FOOTER  ********/
+/********************** FOOTER *******
+**************************************/
 
 .footer {
   width: 100%;
@@ -292,24 +306,135 @@ main {
     margin-right: 12px;
   }
   &__heading {
+    @extend .shrinkhand;
+    text-align: left;
     margin-bottom: 27px;
   }
+  &__link:hover {
+    color: $shadow;
+  }
 }
+
+/**************************************************************************
+ *********************************** RESPONSIVE ***************************
+ **************************************************************************/
+
+/*************** Tablette min 768 px *************/
+
 @media screen and (min-width: 768px) {
+  .back-arrow {
+    top: 24px;
+    left: 100px;
+  }
+  .shrinkhand {
+    font-size: 3rem;
+  }
   .list {
     ul {
       flex-direction: row;
       justify-content: space-between;
       gap: 1%;
+      margin-top: 1rem;
     }
     &__wraper {
       margin: 0;
       gap: 10%;
       padding: 10px;
       justify-content: space-around;
+      flex: 100%;
+      &::before {
+        top: 500px;
+      }
     }
     &__chip {
       margin-left: 0;
+    }
+  }
+  .restaurant {
+    padding: 58px 100px 20px;
+  }
+  .banner {
+    &__heading {
+      padding: 34px 100px 0 100px;
+    }
+  }
+  .dish__course {
+    padding: 18px 100px 0;
+  }
+  .footer {
+    padding: 26px 100px 38px;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+/*************** Desktop min 1024 px *************/
+
+@media screen and (min-width: 1024px) {
+  .banner img {
+    height: 440px;
+  }
+  .list {
+    padding: 52px;
+    &__wraper {
+      flex: 1 80%;
+    }
+    &__heading {
+      flex: 1 1 auto;
+    }
+    ul {
+      margin-top: 1rem;
+    }
+  }
+  .dish {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5rem 100px;
+    &__course {
+      padding: 0;
+      flex: 0 0 45%;
+      &:nth-of-type(3) {
+        margin: 0 auto;
+      }
+    }
+    &__heading::after {
+      width: 100%;
+    }
+  }
+  .footer {
+    padding: 26px 100px 38px;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .restaurant {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    &__item {
+      flex: 40%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*************** Desktop min 1280 px *************/
+
+@media screen and (min-width: 1280px) {
+  .dish {
+    &__course {
+      padding: 0;
+      flex: 0 0 31%;
+      &:nth-of-type(3) {
+        margin: 0;
+      }
     }
   }
 }
