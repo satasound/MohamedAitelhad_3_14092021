@@ -22,159 +22,154 @@
     <title>Ohmyfood - La note enchantée</title>
   </head>
   <body>
-    <header>
-      <a href="index.html"><i class="back-arrow fas fa-arrow-left"></i></a>
-      <!-- Logo -->
-      <h1 class="shrinkhand"><a href="index.html">Ohmyfood</a></h1>
+    <!--     HEADER      -->
+    <header class="header">
+      <!-- Arrow -->
+      <a href="index.html"><i class="header__arrow fas fa-arrow-left"></i></a>
+      <!-- Title -->
+      <h1 class="header__title"><a href="index.html">Ohmyfood</a></h1>
     </header>
+    <!--     MAIN      -->
     <main>
+      <!--   Section Banner  -->
       <section class="banner">
         <img
           src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
           alt="A la française"
         />
         <div class="banner__heading">
-          <h2 class="shrinkhand">La note enchantée</h2>
+          <h2>La note enchantée</h2>
           <i class="heart far fa-heart"></i>
         </div>
       </section>
-      <section class="dish">
+    </section>
+    <!--    Section Dish    -->
+    <section class="dish">
+      <!--    Entrées  -->
         <div class="dish__course">
           <h3 class="dish__heading">entrées</h3>
           <ul>
+            <!-- Item -->  
             <li class="dish__item">
               <h4 class="dish__name">Ravioles de foie gras</h4>
               <div class="dish__description">
                 <p>Accompagnés de leur crème à la truffe</p>
                 <span class="dish__price">25€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Caviar osciètre</h4>
               <div class="dish__description">
                 <p>Sur blini à la farine de blé noir</p>
                 <span class="dish__price">35€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Homard et espuma de potiron</h4>
               <div class="dish__description">
                 <p>Mariné aux zestes d'orange</p>
                 <span class="dish__price">20€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Foie gras de canard cuit entier</h4>
               <div class="dish__description">
                 <p>Confiture de figue et pain toasté</p>
                 <span class="dish__price">40€</span>
-              </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
+              </div>  
             </li>
           </ul>
         </div>
+        <!--    Plats  -->
         <div class="dish__course">
           <h3 class="dish__heading">plats</h3>
           <ul>
+            <!-- Item -->  
             <li class="dish__item">
               <h4 class="dish__name">Noix de coquilles Saint-Jacques</h4>
               <div class="dish__description">
                 <p>Sur lit de purée de céleri-rave</p>
                 <span class="dish__price">40€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Langoustine poêlée</h4>
               <div class="dish__description">
                 <p>Purée de patate douce</p>
                 <span class="dish__price">35€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
+
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Mijoté de queue de boeuf</h4>
               <div class="dish__description">
                 <p>Et riz sauvage aux zestes de citron</p>
                 <span class="dish__price">44€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
           </ul>
         </div>
+        <!--    Plats  -->
         <div class="dish__course">
           <h3 class="dish__heading">desserts</h3>
           <ul>
+            <!-- Item -->  
             <li class="dish__item">
               <h4 class="dish__name">Macaron noisette et chocolat</h4>
               <div class="dish__description">
                 <p>Glace au caramel brun et sel de Guérande</p>
                 <span class="dish__price">18€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Baba au rhum revisité</h4>
               <div class="dish__description">
                 <p>Avec son coulis de citron</p>
                 <span class="dish__price">22€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
+            <!-- Item -->
             <li class="dish__item">
               <h4 class="dish__name">Tarte au citron meringuée</h4>
               <div class="dish__description">
                 <p>Déstructurée</p>
                 <span class="dish__price">23€</span>
               </div>
-              <!-- <div class="dish__check">
-              <i class="fas fa-check-circle"></i>
-            </div> -->
             </li>
           </ul>
         </div>
       </section>
+      <!-- Button -->
       <button class="dish__button">Commander</button>
     </main>
     <footer class="footer">
-      <h2 class="footer__heading" href="index.html">Ohmyfood</h2>
-      <ul class="footer__list">
-        <li class="footer__item">
-          <i class="footer__icon fas fa-utensils fa-fw"></i
-          ><a class="footer__link" href="#">Proposer un restaurant</a>
-        </li>
-        <li class="footer__item">
-          <i class="footer__icon fas fa-hands-helping fa-fw"></i
-          ><a class="footer__link" href="#">Devenir partenaire</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Mentions lègales</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="mailto:contact@ohmyfood.fr">Contact</a>
-        </li>
-      </ul>
-    </footer>
+        <h2 class="footer__heading" href="index.html">Ohmyfood</h2>
+        <ul class="footer__list">
+          <!-- Item -->
+          <li class="footer__item">
+            <i class="footer__icon fas fa-utensils fa-fw"></i
+            ><a class="footer__link" href="#">Proposer un restaurant</a>
+          </li>
+          <!-- Item -->
+          <li class="footer__item">
+            <i class="footer__icon fas fa-hands-helping fa-fw"></i
+            ><a class="footer__link" href="#">Devenir partenaire</a>
+          </li>
+          <!-- Item -->
+          <li class="footer__item">
+            <a class="footer__link" href="#">Mentions lègales</a>
+          </li>
+          <!-- Item -->
+          <li class="footer__item">
+            <a class="footer__link" href="mailto:contact@ohmyfood.fr">Contact</a>
+          </li>
+        </ul>
+      </footer>
   </body>
 </html>

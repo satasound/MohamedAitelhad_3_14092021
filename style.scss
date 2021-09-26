@@ -1,5 +1,16 @@
 /*Mobile First */
 
+/***** Couleurs*****/
+
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$grey: #f6f6f6;
+$lite-grey: #eaeaea;
+$custom-black: #353535;
+$menu-hover: #f5edff;
+$shadow: #c1c1c19c;
+
 /* General */
 
 * {
@@ -10,11 +21,6 @@
 body {
   counter-reset: compteur;
   font-family: "Roboto";
-}
-.shrinkhand {
-  font-family: "Shrikhand", cursive;
-  font-weight: 100;
-  text-align: center;
 }
 h3 {
   font-size: 1.1rem;
@@ -31,30 +37,44 @@ a {
 img {
   object-fit: cover;
 }
+/************* Placeholders ************/
 
-/***** Couleurs*****/
-
-$primary: #9356dc;
-$secondary: #ff79da;
-$tertiary: #99e2d0;
-$grey: #f6f6f6;
-$lite-grey: #eaeaea;
-$custom-black: #353535;
-$menu-hover: #f5edff;
-$shadow: #c1c1c19c;
+%shrinkhand {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  text-align: center;
+}
+%button {
+  padding: 1rem;
+  margin: 20px auto;
+  box-shadow: 0rem 0.2rem 0.5rem lightgrey;
+  background: linear-gradient(355deg, $primary, $secondary);
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
 
 /********************** HEADER **********
 *****************************************/
-
-.back-arrow {
-  border: none;
-  background-color: white;
-  font-size: x-large;
-  cursor: pointer;
-  position: absolute;
-  top: 12px;
-  left: 12px;
+.header {
+  &__title {
+    @extend %shrinkhand;
+  }
+  &__arrow {
+    border: none;
+    background-color: white;
+    font-size: x-large;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
 }
+
 /********************** MAIN ***********
 ****************************************/
 
@@ -95,17 +115,7 @@ main {
     margin-bottom: 15px;
   }
   &__button {
-    padding: 1rem;
-    margin: 20px auto;
-    box-shadow: 0rem 0.2rem 0.5rem lightgrey;
-    background: linear-gradient(355deg, $primary, $secondary);
-    border: none;
-    border-radius: 2rem;
-    color: white;
-    font-size: 1.05rem;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
+    @extend %button;
   }
 }
 
@@ -235,6 +245,9 @@ main {
     margin-top: -38px;
     padding: 34px 12px 0;
     border-radius: 2.5rem 2.5rem 0 0;
+    h2 {
+      @extend %shrinkhand;
+    }
   }
 }
 
@@ -246,7 +259,6 @@ main {
     flex-direction: column;
     padding: 18px 12px 0;
   }
-
   &__heading {
     text-transform: uppercase;
     font-size: 12pt;
@@ -285,7 +297,7 @@ main {
     font-weight: bold;
   }
   &__button {
-    @extend .reservation__button;
+    @extend %button;
     display: block;
     padding: 1rem 3rem;
   }
@@ -306,7 +318,7 @@ main {
     margin-right: 12px;
   }
   &__heading {
-    @extend .shrinkhand;
+    @extend %shrinkhand;
     text-align: left;
     margin-bottom: 27px;
   }
@@ -322,12 +334,10 @@ main {
 /*************** Tablette min 768 px *************/
 
 @media screen and (min-width: 768px) {
-  .back-arrow {
-    top: 24px;
-    left: 100px;
-  }
-  .shrinkhand {
-    font-size: 3rem;
+  .header {
+    &__arrow {
+      left: 100px;
+    }
   }
   .list {
     ul {
@@ -343,7 +353,7 @@ main {
       justify-content: space-around;
       flex: 100%;
       &::before {
-        top: 500px;
+        top: 475px;
       }
     }
     &__chip {
@@ -358,8 +368,10 @@ main {
       padding: 34px 100px 0 100px;
     }
   }
-  .dish__course {
-    padding: 18px 100px 0;
+  .dish {
+    &__course {
+      padding: 18px 100px 0;
+    }
   }
   .footer {
     padding: 26px 100px 38px;
@@ -373,13 +385,27 @@ main {
 /*************** Desktop min 1024 px *************/
 
 @media screen and (min-width: 1024px) {
-  .banner img {
-    height: 440px;
+  .header {
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__arrow {
+      top: 20px;
+      left: 100px;
+    }
+  }
+  .banner {
+    img {
+      height: 440px;
+    }
   }
   .list {
     padding: 52px;
     &__wraper {
       flex: 1 80%;
+      &::before {
+        top: 486px;
+      }
     }
     &__heading {
       flex: 1 1 auto;
