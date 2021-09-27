@@ -6,10 +6,8 @@ $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 $grey: #f6f6f6;
-$lite-grey: #eaeaea;
-$custom-black: #353535;
-$menu-hover: #f5edff;
-$shadow: #c1c1c19c;
+$footer-black: #353535;
+$shadow: #a8a7a79c;
 
 /* General */
 
@@ -27,8 +25,6 @@ h3 {
 }
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 a {
   text-decoration: none;
@@ -37,6 +33,13 @@ a {
 img {
   object-fit: cover;
 }
+
+/************* Mixins ************/
+$card-shadow-size: 0 0.2rem 0.5rem;
+@mixin card-shadow($color: $shadow, $shadow-size: $card-shadow-size) {
+  box-shadow: $shadow-size $color;
+}
+
 /************* Placeholders ************/
 
 %shrinkhand {
@@ -45,9 +48,9 @@ img {
   text-align: center;
 }
 %button {
+  @include card-shadow;
   padding: 1rem;
   margin: 20px auto;
-  box-shadow: 0rem 0.2rem 0.5rem lightgrey;
   background: linear-gradient(355deg, $primary, $secondary);
   border: none;
   border-radius: 2rem;
@@ -56,6 +59,14 @@ img {
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  &:hover {
+    @include card-shadow(darken($shadow, 30%));
+    background: linear-gradient(
+      355deg,
+      lighten($primary, 3%),
+      lighten($secondary, 3%)
+    );
+  }
 }
 
 /********************** HEADER **********
@@ -90,8 +101,8 @@ main {
   justify-content: center;
   gap: 18px;
   text-align: center;
-  box-shadow: 0px 3px 3px inset $shadow;
-  background-color: $lite-grey;
+  box-shadow: 0 0.2rem 0.2rem inset $shadow;
+  background-color: darken($grey, 5%);
   padding: 16px 0;
   margin: 0 -0.2rem;
   &__icon {
@@ -116,6 +127,7 @@ main {
   }
   &__button {
     @extend %button;
+    cursor: pointer;
   }
 }
 
@@ -132,10 +144,10 @@ main {
     flex-direction: column;
   }
   &__wraper {
+    @include card_shadow;
     height: 75px;
     width: auto;
     border-radius: 15px;
-    box-shadow: 0px 3px 15px $shadow;
     background-color: $grey;
     display: flex;
     align-items: center;
@@ -155,14 +167,15 @@ main {
       border-radius: 1rem;
     }
     &:hover {
-      background-color: $menu-hover;
+      background-color: lighten($primary, 33%);
+      cursor: pointer;
+      i {
+        color: $primary;
+      }
     }
   }
   &__icon {
     color: #7e7e7e;
-    &:hover {
-      background-color: $primary;
-    }
   }
 }
 
@@ -177,13 +190,13 @@ main {
     margin-bottom: 28px;
   }
   &__item {
+    @include card_shadow;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 18px;
     border-radius: 15px;
-    box-shadow: 0px 3px 15px $shadow;
   }
   &__description {
     display: flex;
@@ -226,7 +239,7 @@ main {
 }
 .heart {
   font-size: 1.5rem;
-  color: $custom-black;
+  color: $footer-black;
   text-align: right;
   flex: auto;
 }
@@ -273,6 +286,7 @@ main {
     }
   }
   &__item {
+    @include card_shadow;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -281,10 +295,10 @@ main {
     width: auto;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0px 3px 15px $shadow;
     background-color: white;
     overflow: hidden;
     margin: 0 0 24px 0;
+    cursor: pointer;
   }
   &__name {
     font-size: 1.1rem;
@@ -300,6 +314,7 @@ main {
     @extend %button;
     display: block;
     padding: 1rem 3rem;
+    cursor: pointer;
   }
 }
 
@@ -310,7 +325,7 @@ main {
   width: 100%;
   padding: 26px 20px 38px;
   color: white;
-  background-color: $custom-black;
+  background-color: $footer-black;
   &__item {
     margin-bottom: 12px;
   }

@@ -18,8 +18,6 @@ h3 {
 
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -31,6 +29,7 @@ img {
   object-fit: cover;
 }
 
+/************* Mixins ************/
 /************* Placeholders ************/
 .footer__heading, .banner__heading h2, .header__title {
   font-family: "Shrikhand", cursive;
@@ -39,9 +38,9 @@ img {
 }
 
 .dish__button, .reservation__button {
+  box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
   padding: 1rem;
   margin: 20px auto;
-  box-shadow: 0rem 0.2rem 0.5rem lightgrey;
   background: linear-gradient(355deg, #9356dc, #ff79da);
   border: none;
   border-radius: 2rem;
@@ -50,6 +49,10 @@ img {
   font-weight: bold;
   cursor: pointer;
   position: relative;
+}
+.dish__button:hover, .reservation__button:hover {
+  box-shadow: 0 0.2rem 0.5rem rgba(92, 90, 90, 0.6117647059);
+  background: linear-gradient(355deg, #9b63df, #ff88de);
 }
 
 /********************** HEADER **********
@@ -77,8 +80,8 @@ main {
   justify-content: center;
   gap: 18px;
   text-align: center;
-  box-shadow: 0px 3px 3px inset #c1c1c19c;
-  background-color: #eaeaea;
+  box-shadow: 0 0.2rem 0.2rem inset #a8a7a79c;
+  background-color: #e9e9e9;
   padding: 16px 0;
   margin: 0 -0.2rem;
 }
@@ -101,6 +104,10 @@ main {
 .reservation p {
   margin-bottom: 15px;
 }
+.reservation__button {
+  cursor: pointer;
+}
+
 /********* Section List **********/
 .list {
   display: flex;
@@ -114,10 +121,10 @@ main {
   flex-direction: column;
 }
 .list__wraper {
+  box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
   height: 75px;
   width: auto;
   border-radius: 15px;
-  box-shadow: 0px 3px 15px #c1c1c19c;
   background-color: #f6f6f6;
   display: flex;
   align-items: center;
@@ -138,13 +145,14 @@ main {
   border-radius: 1rem;
 }
 .list__wraper:hover {
-  background-color: #f5edff;
+  background-color: #ece1f9;
+  cursor: pointer;
+}
+.list__wraper:hover i {
+  color: #9356dc;
 }
 .list__icon {
   color: #7e7e7e;
-}
-.list__icon:hover {
-  background-color: #9356dc;
 }
 
 /******* Section Restaurant ********/
@@ -158,13 +166,13 @@ main {
   margin-bottom: 28px;
 }
 .restaurant__item {
+  box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 18px;
   border-radius: 15px;
-  box-shadow: 0px 3px 15px #c1c1c19c;
 }
 .restaurant__description {
   display: flex;
@@ -245,6 +253,7 @@ main {
   background: #99e2d0;
 }
 .dish__item {
+  box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -253,10 +262,10 @@ main {
   width: auto;
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 0px 3px 15px #c1c1c19c;
   background-color: white;
   overflow: hidden;
   margin: 0 0 24px 0;
+  cursor: pointer;
 }
 .dish__name {
   font-size: 1.1rem;
@@ -271,6 +280,7 @@ main {
 .dish__button {
   display: block;
   padding: 1rem 3rem;
+  cursor: pointer;
 }
 
 /********************** FOOTER *******
@@ -292,7 +302,7 @@ main {
   margin-bottom: 27px;
 }
 .footer__link:hover {
-  color: #c1c1c19c;
+  color: #a8a7a79c;
 }
 
 /**************************************************************************
