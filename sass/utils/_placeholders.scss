@@ -1,0 +1,26 @@
+%shrinkhand {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  text-align: center;
+}
+%button {
+  @include card-shadow;
+  padding: 1rem;
+  margin: 20px auto;
+  background: linear-gradient(355deg, $color-primary, $color-secondary);
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    @include card-shadow(darken($color-shadow, 30%));
+    background: linear-gradient(
+      355deg,
+      lighten($color-primary, 3%),
+      lighten($color-secondary, 3%)
+    );
+  }
+}

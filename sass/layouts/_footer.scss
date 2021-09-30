@@ -1,0 +1,38 @@
+/********************** FOOTER *******
+**************************************/
+.footer {
+  width: 100%;
+  padding: 26px 20px 38px;
+  color: white;
+  background-color: $color-footer-black;
+  @include breakpoint(tablet) {
+    padding: 26px 100px 38px;
+  }
+  @include breakpoint(laptop) {
+    padding: 26px 100px 38px;
+  }
+  &__item {
+    margin-bottom: 12px;
+  }
+  &__icon {
+    margin-right: 12px;
+  }
+  &__heading {
+    @extend %shrinkhand !optional;
+    text-align: left;
+    margin-bottom: 27px;
+  }
+  &__link:hover {
+    color: $color-shadow;
+  }
+  &__list {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include breakpoint(laptop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

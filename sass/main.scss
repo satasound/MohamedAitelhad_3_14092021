@@ -1,0 +1,50 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./pages/accueil";
+@import "./pages/menus";
+@import "./components/buttons";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 280px;
+  counter-reset: compteur;
+  font-family: "Roboto";
+  @include breakpoint(desktop) {
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  object-fit: cover;
+}
+
+/********************** MAIN ***********
+****************************************/
+
+main {
+  background-color: $color-grey;
+  padding-bottom: 60px;
+}

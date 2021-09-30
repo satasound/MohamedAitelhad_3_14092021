@@ -1,0 +1,197 @@
+/******* Section Location ********/
+
+.location {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  box-shadow: 0 0.2rem 0.2rem inset $color-shadow;
+  background-color: darken($color-grey, 5%);
+  padding: 16px 0;
+  margin: 0 -0.2rem;
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+  &__place {
+    font-size: 1.1rem;
+  }
+}
+
+/***** Section Reservation ******/
+
+.reservation {
+  text-align: center;
+  padding: 42px 50px 57px;
+  h2 {
+    margin-bottom: 25px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  &__button {
+    @extend %button !optional;
+    cursor: pointer;
+  }
+}
+
+/********* Section List **********/
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 52px 20px;
+  background-color: white;
+  @include breakpoint(laptop) {
+    padding: 52px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1%;
+      margin-top: 1rem;
+    }
+    @include breakpoint(laptop) {
+      margin-top: 1rem;
+    }
+  }
+  &__wraper {
+    @include card_shadow;
+    height: 75px;
+    width: auto;
+    border-radius: 15px;
+    background-color: $color-grey;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0 0 24px 12px;
+    @include breakpoint(tablet) {
+      margin: 0;
+      gap: 10%;
+      padding: 10px;
+      justify-content: space-around;
+      flex: 100%;
+    }
+    @include breakpoint(laptop) {
+      flex: 1 80%;
+    }
+    &::before {
+      counter-increment: compteur;
+      content: counter(compteur) " ";
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      margin-left: -1rem;
+      background: #9356dc;
+      border-radius: 1rem;
+      @include breakpoint(tablet) {
+        top: 475px;
+      }
+      @include breakpoint(laptop) {
+        top: 486px;
+      }
+    }
+    &__heading {
+      @include breakpoint(laptop) {
+        flex: 1 1 auto;
+      }
+    }
+    &:hover {
+      background-color: lighten($color-primary, 33%);
+      cursor: pointer;
+      i {
+        color: $color-primary;
+      }
+    }
+  }
+  &__icon {
+    color: #7e7e7e;
+    margin-left: 3rem;
+  }
+}
+
+/******* Section Restaurant ********/
+.restaurant * {
+  flex: 100%;
+}
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  padding: 58px 20px 20px;
+  background-color: $color-grey;
+  @include breakpoint(tablet) {
+    padding: 58px 100px 20px;
+  }
+  h2 {
+    margin-bottom: 28px;
+  }
+  &__list {
+    @include breakpoint(laptop) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+  &__item {
+    @include card_shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    @include breakpoint(laptop) {
+      flex: 40%;
+      margin-bottom: 0;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    padding: 14px 25px 20px 14px;
+    h3 {
+      flex: auto;
+      font-size: 1.2rem;
+    }
+    p {
+      order: 1;
+      margin-top: 2px;
+      font-size: 1.2rem;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 174px;
+    border-radius: 15px 15px 0 0;
+  }
+  a {
+    position: relative;
+  }
+  &__new {
+    position: absolute;
+    background-color: $color-tertiary;
+    color: #008766;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    z-index: 2;
+    top: 12px;
+    right: 12px;
+  }
+}
+.heart {
+  font-size: 1.5rem;
+  color: $color-footer-black;
+  text-align: right;
+  flex: auto;
+}

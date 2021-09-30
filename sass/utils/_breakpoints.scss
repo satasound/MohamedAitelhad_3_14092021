@@ -1,0 +1,138 @@
+/**************************************************************************
+ *********************************** RESPONSIVE ***************************
+ **************************************************************************/
+
+/*************** Tablette min 768 px *************/
+
+// @media screen and (min-width: 768px) {
+//     .header {
+//       &__arrow {
+//         left: 100px;
+//       }
+//     }
+//   .list {
+//     ul {
+//       flex-direction: row;
+//       justify-content: space-between;
+//       gap: 1%;
+//       margin-top: 1rem;
+//     }
+//     &__wraper {
+//       margin: 0;
+//       gap: 10%;
+//       padding: 10px;
+//       justify-content: space-around;
+//       flex: 100%;
+//       &::before {
+//         top: 475px;
+//       }
+//     }
+//   }
+//   .restaurant {
+//     padding: 58px 100px 20px;
+//   }
+//   .banner {
+//     &__heading {
+//       padding: 34px 100px 0 100px;
+//     }
+//   }
+//   .dish {
+//     &__course {
+//       padding: 18px 100px 0;
+//     }
+//   }
+//   .footer {
+//     padding: 26px 100px 38px;
+//     &__list {
+//       display: flex;
+//       justify-content: space-between;
+//     }
+//   }
+// }
+
+/*************** Desktop min 1024 px *************/
+
+// @media screen and (min-width: 1024px) {
+//   .header {
+//     &__title {
+//       font-size: 2.5rem;
+//     }
+//     &__arrow {
+//       top: 20px;
+//       left: 100px;
+//     }
+//   }
+//   .banner {
+//     img {
+//       height: 440px;
+//     }
+//   }
+//   .list {
+//     padding: 52px;
+//     &__wraper {
+//       flex: 1 80%;
+//     //   &::before {
+//     //     top: 486px;
+//     //   }
+//     }
+//     &__heading {
+//       flex: 1 1 auto;
+//     }
+//     ul {
+//       margin-top: 1rem;
+//     }
+//   }
+//   .dish {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     padding: 5rem 100px;
+//     &__course {
+//       padding: 0;
+//       flex: 0 0 45%;
+//       &:nth-of-type(3) {
+//         margin: 0 auto;
+//       }
+//     }
+//     &__heading::after {
+//       width: 100%;
+//     }
+//   }
+//   .footer {
+//     padding: 26px 100px 38px;
+//     &__list {
+//       display: flex;
+//       justify-content: space-between;
+//     }
+//   }
+//   .restaurant {
+//     &__list {
+//       display: flex;
+//       justify-content: space-between;
+//       flex-wrap: wrap;
+//       gap: 3rem;
+//     }
+//     &__item {
+//       flex: 40%;
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+/*************** Desktop min 1280 px *************/
+
+// @media screen and (min-width: 1280px) {
+//   body {
+//     max-width: 1920px;
+//     margin: auto;
+//   }
+//   .dish {
+//     &__course {
+//       padding: 0;
+//       flex: 0 0 31%;
+//       &:nth-of-type(3) {
+//         margin: 0;
+//       }
+//     }
+//   }
+// }
