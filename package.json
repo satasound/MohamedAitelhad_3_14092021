@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.42.1",
-    "browserslist": "last 4 versions"
+    "browserslist": "last 10 versions"
   }
 }

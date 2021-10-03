@@ -1,4 +1,4 @@
-/******* Section Location ********/
+/***************** Section Location ******************/
 
 .location {
   display: flex;
@@ -9,35 +9,40 @@
   background-color: darken($color-grey, 5%);
   padding: 16px 0;
   margin: 0 -0.2rem;
+  /******* location__icon *****/
   &__icon {
     display: flex;
     align-items: center;
   }
+  /******* location__place *****/
   &__place {
     font-size: 1.1rem;
   }
 }
 
-/***** Section Reservation ******/
+/***************** Section Reservation ****************/
 
 .reservation {
   text-align: center;
   padding: 42px 50px 57px;
+  /******* reservation h2 *****/
   h2 {
     margin-bottom: 25px;
   }
+  /******* reservation p *****/
   p {
     margin-bottom: 15px;
   }
+  /***** reservation__button ****/
   &__button {
     @extend %button !optional;
     cursor: pointer;
   }
 }
 
-/********* Section List **********/
+/***************** Section fonctionnement **************/
 
-.list {
+.fonctionnement {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -46,6 +51,7 @@
   @include breakpoint(laptop) {
     padding: 52px;
   }
+  /***** fonctionnement ul ****/
   ul {
     display: flex;
     flex-direction: column;
@@ -57,10 +63,13 @@
     }
     @include breakpoint(laptop) {
       margin-top: 1rem;
+      gap: 4%;
     }
   }
+  /***** fonctionnement__wraper ****/
   &__wraper {
     @include card_shadow;
+    position: relative;
     height: 75px;
     width: auto;
     border-radius: 15px;
@@ -69,40 +78,40 @@
     align-items: center;
     gap: 30px;
     margin: 0 0 24px 12px;
+    /*Responsive*/
     @include breakpoint(tablet) {
       margin: 0;
       gap: 10%;
       padding: 10px;
-      justify-content: space-around;
+      justify-content: center;
       flex: 100%;
     }
     @include breakpoint(laptop) {
       flex: 1 80%;
     }
+    /*wraper::before*/
     &::before {
       counter-increment: compteur;
       content: counter(compteur) " ";
       position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: #fff;
       padding: 0.5rem 0.8rem;
-      margin-left: -1rem;
+      left: -1rem;
       background: #9356dc;
-      border-radius: 1rem;
+      border-radius: 20px;
+      /*Responsive*/
       @include breakpoint(tablet) {
-        top: 475px;
-      }
-      @include breakpoint(laptop) {
-        top: 486px;
+        top: -20px;
+        left: auto;
       }
     }
+    /*wraper__heading*/
     &__heading {
       @include breakpoint(laptop) {
         flex: 1 1 auto;
       }
     }
+    /*wraper:hover*/
     &:hover {
       background-color: lighten($color-primary, 33%);
       cursor: pointer;
@@ -111,13 +120,18 @@
       }
     }
   }
+  /***** fonctionnement__icon ****/
   &__icon {
     color: #7e7e7e;
     margin-left: 3rem;
+    /*Responsive*/
+    @include breakpoint(tablet) {
+      margin-left: 0;
+    }
   }
 }
 
-/******* Section Restaurant ********/
+/****************** Section Restaurant *****************/
 .restaurant * {
   flex: 100%;
 }
@@ -126,12 +140,15 @@
   flex-direction: column;
   padding: 58px 20px 20px;
   background-color: $color-grey;
+  /*Responsive*/
   @include breakpoint(tablet) {
     padding: 58px 100px 20px;
   }
+  /****** restaurant h2 *****/
   h2 {
     margin-bottom: 28px;
   }
+  /***** restaurant__list ****/
   &__list {
     @include breakpoint(laptop) {
       display: flex;
@@ -140,6 +157,7 @@
       gap: 3rem;
     }
   }
+  /***** restaurant__item ****/
   &__item {
     @include card_shadow;
     display: flex;
@@ -148,11 +166,13 @@
     width: 100%;
     margin-bottom: 18px;
     border-radius: 15px;
+    /*Responsive*/
     @include breakpoint(laptop) {
       flex: 40%;
       margin-bottom: 0;
     }
   }
+  /***** restaurant__description ****/
   &__description {
     display: flex;
     flex-flow: row wrap;
@@ -168,14 +188,17 @@
       font-size: 1.2rem;
     }
   }
+  /***** restaurant__image ****/
   &__image {
     width: 100%;
     height: 174px;
     border-radius: 15px 15px 0 0;
   }
+  /***** restaurant a ****/
   a {
     position: relative;
   }
+  /***** restaurant__new ****/
   &__new {
     position: absolute;
     background-color: $color-tertiary;
@@ -189,6 +212,7 @@
     right: 12px;
   }
 }
+/***** heart ****/
 .heart {
   font-size: 1.5rem;
   color: $color-footer-black;

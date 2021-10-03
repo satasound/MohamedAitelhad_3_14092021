@@ -1,15 +1,10 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/placeholders";
-@import "./utils/extensions";
-@import "./base/base";
-@import "./base/typography";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/accueil";
 @import "./pages/menus";
-@import "./components/buttons";
 
 * {
   padding: 0;
@@ -40,9 +35,6 @@ a {
 img {
   object-fit: cover;
 }
-
-/********************** MAIN ***********
-****************************************/
 
 main {
   background-color: $color-grey;

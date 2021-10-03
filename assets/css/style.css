@@ -49,14 +49,25 @@
     left: 100px;
   }
 }
+@media (min-width: 1280px) {
+  .header__arrow {
+    top: 20px;
+    left: 50px;
+  }
+}
 
-/********************** FOOTER *******
-**************************************/
+/************************* FOOTER  ********************/
 .footer {
   width: 100%;
   padding: 26px 20px 38px;
   color: white;
   background-color: #353535;
+  /*responsive*/
+  /***** footer__item ****/
+  /***** footer__icon ****/
+  /***** footer__heading ****/
+  /***** footer__link ****/
+  /***** footer__list ****/
 }
 @media (min-width: 768px) {
   .footer {
@@ -66,6 +77,11 @@
 @media (min-width: 1024px) {
   .footer {
     padding: 26px 100px 38px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 26px 50px 38px;
   }
 }
 .footer__item {
@@ -81,6 +97,9 @@
 .footer__link:hover {
   color: #a8a7a79c;
 }
+.footer__list {
+  /*responsive*/
+}
 @media (min-width: 768px) {
   .footer__list {
     display: flex;
@@ -94,7 +113,7 @@
   }
 }
 
-/******* Section Location ********/
+/***************** Section Location ******************/
 .location {
   display: flex;
   justify-content: center;
@@ -104,6 +123,8 @@
   background-color: #e9e9e9;
   padding: 16px 0;
   margin: 0 -0.2rem;
+  /******* location__icon *****/
+  /******* location__place *****/
 }
 .location__icon {
   display: flex;
@@ -113,10 +134,13 @@
   font-size: 1.1rem;
 }
 
-/***** Section Reservation ******/
+/***************** Section Reservation ****************/
 .reservation {
   text-align: center;
   padding: 42px 50px 57px;
+  /******* reservation h2 *****/
+  /******* reservation p *****/
+  /***** reservation__button ****/
 }
 .reservation h2 {
   margin-bottom: 25px;
@@ -128,25 +152,28 @@
   cursor: pointer;
 }
 
-/********* Section List **********/
-.list {
+/***************** Section fonctionnement **************/
+.fonctionnement {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 52px 20px;
   background-color: white;
+  /***** fonctionnement ul ****/
+  /***** fonctionnement__wraper ****/
+  /***** fonctionnement__icon ****/
 }
 @media (min-width: 1024px) {
-  .list {
+  .fonctionnement {
     padding: 52px;
   }
 }
-.list ul {
+.fonctionnement ul {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .list ul {
+  .fonctionnement ul {
     flex-direction: row;
     justify-content: space-between;
     gap: 1%;
@@ -154,12 +181,14 @@
   }
 }
 @media (min-width: 1024px) {
-  .list ul {
+  .fonctionnement ul {
     margin-top: 1rem;
+    gap: 4%;
   }
 }
-.list__wraper {
+.fonctionnement__wraper {
   box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
+  position: relative;
   height: 75px;
   width: auto;
   border-radius: 15px;
@@ -168,62 +197,66 @@
   align-items: center;
   gap: 30px;
   margin: 0 0 24px 12px;
+  /*Responsive*/
+  /*wraper::before*/
+  /*wraper__heading*/
+  /*wraper:hover*/
 }
 @media (min-width: 768px) {
-  .list__wraper {
+  .fonctionnement__wraper {
     margin: 0;
     gap: 10%;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: center;
     flex: 100%;
   }
 }
 @media (min-width: 1024px) {
-  .list__wraper {
+  .fonctionnement__wraper {
     flex: 1 80%;
   }
 }
-.list__wraper::before {
+.fonctionnement__wraper::before {
   counter-increment: compteur;
   content: counter(compteur) " ";
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #fff;
   padding: 0.5rem 0.8rem;
-  margin-left: -1rem;
+  left: -1rem;
   background: #9356dc;
-  border-radius: 1rem;
+  border-radius: 20px;
+  /*Responsive*/
 }
 @media (min-width: 768px) {
-  .list__wraper::before {
-    top: 475px;
+  .fonctionnement__wraper::before {
+    top: -20px;
+    left: auto;
   }
 }
 @media (min-width: 1024px) {
-  .list__wraper::before {
-    top: 486px;
-  }
-}
-@media (min-width: 1024px) {
-  .list__wraper__heading {
+  .fonctionnement__wraper__heading {
     flex: 1 1 auto;
   }
 }
-.list__wraper:hover {
+.fonctionnement__wraper:hover {
   background-color: #ece1f9;
   cursor: pointer;
 }
-.list__wraper:hover i {
+.fonctionnement__wraper:hover i {
   color: #9356dc;
 }
-.list__icon {
+.fonctionnement__icon {
   color: #7e7e7e;
   margin-left: 3rem;
+  /*Responsive*/
+}
+@media (min-width: 768px) {
+  .fonctionnement__icon {
+    margin-left: 0;
+  }
 }
 
-/******* Section Restaurant ********/
+/****************** Section Restaurant *****************/
 .restaurant * {
   flex: 100%;
 }
@@ -233,6 +266,14 @@
   flex-direction: column;
   padding: 58px 20px 20px;
   background-color: #f6f6f6;
+  /*Responsive*/
+  /****** restaurant h2 *****/
+  /***** restaurant__list ****/
+  /***** restaurant__item ****/
+  /***** restaurant__description ****/
+  /***** restaurant__image ****/
+  /***** restaurant a ****/
+  /***** restaurant__new ****/
 }
 @media (min-width: 768px) {
   .restaurant {
@@ -258,6 +299,7 @@
   width: 100%;
   margin-bottom: 18px;
   border-radius: 15px;
+  /*Responsive*/
 }
 @media (min-width: 1024px) {
   .restaurant__item {
@@ -301,6 +343,7 @@
   right: 12px;
 }
 
+/***** heart ****/
 .heart {
   font-size: 1.5rem;
   color: #353535;
@@ -308,10 +351,15 @@
   flex: auto;
 }
 
-/******* Section Banner ********/
+/******************** Section Banner ********************/
+.banner {
+  /******** banner img *******/
+  /******* banner__heading *****/
+}
 .banner img {
   width: 100%;
   height: 254px;
+  /*Responsive*/
 }
 @media (min-width: 1024px) {
   .banner img {
@@ -325,13 +373,29 @@
   margin-top: -38px;
   padding: 34px 12px 0;
   border-radius: 2.5rem 2.5rem 0 0;
+  /*Responsive*/
+  /******** banner h2 *******/
 }
 @media (min-width: 768px) {
   .banner__heading {
     padding: 34px 100px 0 100px;
   }
 }
-/******* Section Dish ********/
+@media (min-width: 1280px) {
+  .banner__heading {
+    padding: 34px 50px 0 50px;
+  }
+}
+/********************* Section Dish **********************/
+.dish {
+  /******** dish__course *******/
+  /******** Dish__Heading *******/
+  /******** Dish__Item *******/
+  /******** Dish__Name *******/
+  /******* Dish__Description *****/
+  /******** Dish__Price *******/
+  /******** Dish__Button *******/
+}
 @media (min-width: 1024px) {
   .dish {
     display: flex;
@@ -340,10 +404,16 @@
     padding: 5rem 100px;
   }
 }
+@media (min-width: 1280px) {
+  .dish {
+    padding: 5rem 50px;
+  }
+}
 .dish__course {
   display: flex;
   flex-direction: column;
   padding: 18px 12px 0;
+  /*Responsive*/
 }
 @media (min-width: 768px) {
   .dish__course {
@@ -373,12 +443,14 @@
   font-size: 12pt;
   font-weight: normal;
   margin-bottom: 15px;
+  /*Heading::after*/
 }
 .dish__heading::after {
   content: "";
   display: flex;
   width: 2.8rem;
   height: 3px;
+  /*Responsive*/
   background: #99e2d0;
 }
 @media (min-width: 1024px) {
@@ -388,6 +460,7 @@
 }
 .dish__item {
   box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -452,8 +525,6 @@ img {
   object-fit: cover;
 }
 
-/********************** MAIN ***********
-****************************************/
 main {
   background-color: #f6f6f6;
   padding-bottom: 60px;
