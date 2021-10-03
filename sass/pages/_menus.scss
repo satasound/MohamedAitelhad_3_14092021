@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 5rem 100px;
+    padding: 5rem 50px;
   }
   @include breakpoint(desktop) {
     padding: 5rem 50px;

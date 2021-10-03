@@ -144,6 +144,9 @@
   @include breakpoint(tablet) {
     padding: 58px 100px 20px;
   }
+  @include breakpoint(laptop) {
+    padding: 58px 50px 20px;
+  }
   /****** restaurant h2 *****/
   h2 {
     margin-bottom: 28px;
