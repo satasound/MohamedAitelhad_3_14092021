@@ -13,6 +13,9 @@
   }
   @include breakpoint(desktop) {
     padding: 26px 50px 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   /***** footer__item ****/
   &__item {
@@ -39,9 +42,8 @@
       display: flex;
       justify-content: space-between;
     }
-    @include breakpoint(laptop) {
-      display: flex;
-      justify-content: space-between;
+    @include breakpoint(desktop) {
+      gap: 3rem;
     }
   }
 }

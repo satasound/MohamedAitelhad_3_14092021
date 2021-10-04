@@ -16,7 +16,7 @@
   cursor: pointer;
   position: relative;
   &:hover {
-    @include card-shadow(darken($color-shadow, 30%));
+    @include card-shadow(darken($color-shadow, 40%));
     background: linear-gradient(
       355deg,
       lighten($color-primary, 3%),

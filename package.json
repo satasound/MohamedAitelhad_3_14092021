@@ -4,13 +4,16 @@
   "description": "---",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss assets/css/style.css",
+    "sass": "sass --watch ./sass/main.scss:./assets/css/style.css",
+    "compress": "sass --watch ./sass/main.scss:./assets/css/compressed/style.css --style compressed",
     "prefix": "postcss ./assets/css/style.css --use autoprefixer -d ./assets/css/prefixed/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.42.1",
-    "browserslist": "last 10 versions"
+    "autoprefixer": "^10.3.6",
+    "postcss": "^8.3.8",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.42.1"
   }
 }
