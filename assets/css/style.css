@@ -457,16 +457,17 @@ main {
 .restaurant__heart {
   position: absolute;
   font-size: 1.5rem;
-  color: #353535;
   top: 14px;
   right: 25px;
   cursor: pointer;
-  transition: 1s ease-in;
+  transition: 2s ease-in;
 }
 .restaurant__heart:hover {
-  color: #ff79da;
+  background: linear-gradient(355deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
   font-weight: 900;
-  animation: pulse 1s ease forwards;
+  animation: pulse 1.5s ease forwards;
 }
 
 /******************** Section Banner ********************/
