@@ -33,3 +33,16 @@
     transform: scale(1);
   }
 }
+@keyframes fadeinMenu {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

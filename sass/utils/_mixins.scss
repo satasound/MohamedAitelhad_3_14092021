@@ -2,12 +2,6 @@ $card-shadow-size: 0 0.2rem 0.5rem;
 @mixin card-shadow($color: $color-shadow, $shadow-size: $card-shadow-size) {
   box-shadow: $shadow-size $color;
 }
-// $breakpoints: (  "tablet": 768px, "old-desktop": 1024px, "desktop": 1280px);
-// @mixin tablette {
-//   @media screen and (min-width: map-get($breakpoints, tablet)) {
-//     @content;
-//   }
-// }
 
 @mixin breakpoint($point) {
   @if $point == tablet {
@@ -21,6 +15,17 @@ $card-shadow-size: 0 0.2rem 0.5rem;
   } @else if $point == desktop {
     @media (min-width: 1280px) {
       @content;
+    }
+  }
+}
+
+$time: 400;
+@mixin fade-in-childs() {
+  @for $i from 1 to 4 {
+    ul li:nth-child(#{$i}) {
+      $delay: $time * ($i - 1);
+      animation: fadeinMenu 2s ease-in-out both;
+      animation-delay: #{$delay}ms;
     }
   }
 }

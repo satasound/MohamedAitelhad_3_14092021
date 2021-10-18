@@ -56,6 +56,19 @@
     transform: scale(1);
   }
 }
+@keyframes fadeinMenu {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -460,7 +473,7 @@ main {
   top: 14px;
   right: 25px;
   cursor: pointer;
-  transition: 2s ease-in;
+  transition: 1s ease-in;
 }
 .restaurant__heart:hover {
   background: linear-gradient(355deg, #9356dc, #ff79da);
@@ -514,6 +527,7 @@ main {
   /******* Dish__Description *****/
   /******** Dish__Price *******/
   /******** Dish__Button *******/
+  /******** Dish__Check *******/
 }
 @media (min-width: 1024px) {
   .dish {
@@ -532,7 +546,20 @@ main {
   display: flex;
   flex-direction: column;
   padding: 18px 12px 0;
+  /*Animation*/
   /*Responsive*/
+}
+.dish__course ul li:nth-child(1) {
+  animation: fadeinMenu 2s ease-in-out both;
+  animation-delay: 0ms;
+}
+.dish__course ul li:nth-child(2) {
+  animation: fadeinMenu 2s ease-in-out both;
+  animation-delay: 400ms;
+}
+.dish__course ul li:nth-child(3) {
+  animation: fadeinMenu 2s ease-in-out both;
+  animation-delay: 800ms;
 }
 @media (min-width: 768px) {
   .dish__course {
@@ -581,7 +608,6 @@ main {
   box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   gap: 6px;
   height: auto;
@@ -593,20 +619,86 @@ main {
   margin: 0 0 24px 0;
   cursor: pointer;
 }
+.dish__item:active .dish__check {
+  transform: translateX(-100px);
+}
+.dish__item:active .dish__check::after {
+  transform: rotate(360deg);
+}
+.dish__item:active .dish__price {
+  transform: translateX(-70px);
+}
+.dish__item:active .dish__description {
+  width: 65%;
+}
+@media (min-width: 1280px) {
+  .dish__item:hover .dish__check {
+    transform: translateX(-100px);
+  }
+  .dish__item:hover .dish__check::after {
+    transform: rotate(360deg);
+  }
+  .dish__item:hover .dish__price {
+    transform: translateX(-70px);
+  }
+  .dish__item:hover .dish__description {
+    width: 65%;
+  }
+}
 .dish__name {
   font-size: 1.1rem;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__description {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  transition: width 1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  transition: width 500ms;
+}
+.dish__description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__price {
   font-weight: bold;
+  transition: transform 600ms;
+  align-self: flex-end;
 }
 .dish__button {
   display: block;
   padding: 1rem 3rem;
   cursor: pointer;
+}
+.dish__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 75px;
+  height: 100%;
+  background-color: #99e2d0;
+  transition: transform 600ms;
+  /*Check::after*/
+}
+.dish__check::after {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ffffff;
+  background-color: #99e2d0;
+  transition: transform 600ms;
 }
 
 /*# sourceMappingURL=style.css.map */
