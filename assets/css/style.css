@@ -1,9 +1,14 @@
+/* General Shadow */
+/* Media Queries */
+/* Fade in Dishes */
+/*  Font */
 .banner__heading h2, .footer__heading, .header__title {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
   text-align: center;
 }
 
+/* Bouton Reservation */
 .dish__button, .reservation__button {
   box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
   padding: 1rem;
@@ -16,6 +21,7 @@
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  /* Effet */
 }
 .dish__button:hover, .reservation__button:hover {
   box-shadow: 0 0.2rem 0.5rem rgba(66, 65, 65, 0.6117647059);
@@ -45,6 +51,7 @@
     z-index: -100;
   }
 }
+/*********** heart pulse ***********/
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -56,7 +63,8 @@
     transform: scale(1);
   }
 }
-@keyframes fadeinMenu {
+/*********** fade in dishes ***********/
+@keyframes fadeInDishes {
   0% {
     transform: translateY(25%);
     opacity: 0;
@@ -256,7 +264,7 @@ main {
 /***************** Section Reservation ****************/
 .reservation {
   text-align: center;
-  padding: 42px 50px 57px;
+  padding: 42px 50px 42px;
   /******* reservation h2 *****/
   /******* reservation p *****/
   /***** reservation__button ****/
@@ -392,8 +400,6 @@ main {
   /***** restaurant__description ****/
   /***** restaurant__image ****/
   /***** restaurant a ****/
-  /***** restaurant__new ****/
-  /***** heart ****/
 }
 @media (min-width: 768px) {
   .restaurant {
@@ -418,6 +424,7 @@ main {
 }
 .restaurant__item {
   box-shadow: 0 0.2rem 0.5rem #a8a7a79c;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -425,6 +432,19 @@ main {
   margin-bottom: 18px;
   border-radius: 15px;
   /*Responsive*/
+}
+.restaurant__item:nth-child(1)::before, .restaurant__item:nth-child(2)::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
 }
 @media (min-width: 1024px) {
   .restaurant__item {
@@ -456,18 +476,8 @@ main {
 .restaurant a {
   position: relative;
 }
-.restaurant__new {
-  position: absolute;
-  background-color: #99e2d0;
-  color: #008766;
-  border-radius: 2px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 6px 10px;
-  top: 12px;
-  right: 12px;
-}
 .restaurant__heart {
+  z-index: 1;
   position: absolute;
   font-size: 1.5rem;
   top: 14px;
@@ -550,15 +560,15 @@ main {
   /*Responsive*/
 }
 .dish__course ul li:nth-child(1) {
-  animation: fadeinMenu 2s ease-in-out both;
+  animation: fadeInDishes 2s ease-in-out both;
   animation-delay: 0ms;
 }
 .dish__course ul li:nth-child(2) {
-  animation: fadeinMenu 2s ease-in-out both;
+  animation: fadeInDishes 2s ease-in-out both;
   animation-delay: 400ms;
 }
 .dish__course ul li:nth-child(3) {
-  animation: fadeinMenu 2s ease-in-out both;
+  animation: fadeInDishes 2s ease-in-out both;
   animation-delay: 800ms;
 }
 @media (min-width: 768px) {

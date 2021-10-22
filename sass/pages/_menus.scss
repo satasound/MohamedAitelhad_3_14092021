@@ -91,7 +91,7 @@
   }
   /******** Dish__Item *******/
   &__item {
-    @include card_shadow;
+    @include custom_shadow;
     position: relative;
     display: flex;
     justify-content: space-between;

@@ -1,8 +1,9 @@
-$card-shadow-size: 0 0.2rem 0.5rem;
-@mixin card-shadow($color: $color-shadow, $shadow-size: $card-shadow-size) {
-  box-shadow: $shadow-size $color;
+/* General Shadow */
+$size-shadow: 0 0.2rem 0.5rem;
+@mixin custom-shadow($color: $color-shadow, $size: $size-shadow) {
+  box-shadow: $size $color;
 }
-
+/* Media Queries */
 @mixin breakpoint($point) {
   @if $point == tablet {
     @media (min-width: 768px) {
@@ -18,13 +19,13 @@ $card-shadow-size: 0 0.2rem 0.5rem;
     }
   }
 }
-
+/* Fade in Dishes */
 $time: 400;
 @mixin fade-in-childs() {
   @for $i from 1 to 4 {
     ul li:nth-child(#{$i}) {
       $delay: $time * ($i - 1);
-      animation: fadeinMenu 2s ease-in-out both;
+      animation: fadeInDishes 2s ease-in-out both;
       animation-delay: #{$delay}ms;
     }
   }

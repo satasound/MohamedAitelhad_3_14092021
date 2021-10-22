@@ -1,13 +1,15 @@
+/*  Font */
 %shrinkhand {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
   text-align: center;
 }
+/* Bouton Reservation */
 %button {
-  @include card-shadow;
+  @include custom-shadow;
   padding: 1rem;
   margin: 20px auto;
-  background: linear-gradient(355deg, $color-primary, $color-secondary);
+  background: $button-gradient;
   border: none;
   border-radius: 2rem;
   color: white;
@@ -15,8 +17,9 @@
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  /* Effet */
   &:hover {
-    @include card-shadow(darken($color-shadow, 40%));
+    @include custom-shadow(darken($color-shadow, 40%));
     background: linear-gradient(
       355deg,
       lighten($color-primary, 3%),
