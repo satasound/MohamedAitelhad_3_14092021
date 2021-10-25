@@ -480,13 +480,13 @@ main {
   z-index: 1;
   position: absolute;
   font-size: 1.5rem;
-  top: 14px;
   right: 25px;
   cursor: pointer;
   transition: 1s ease-in;
 }
 .restaurant__heart:hover {
   background: linear-gradient(355deg, #9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 900;

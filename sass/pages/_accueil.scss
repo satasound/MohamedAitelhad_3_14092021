@@ -221,12 +221,12 @@
     z-index: 1;
     position: absolute;
     font-size: 1.5rem;
-    top: 14px;
     right: 25px;
     cursor: pointer;
     transition: 1s ease-in;
     &:hover {
       background: $button-gradient;
+      background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       font-weight: 900;
